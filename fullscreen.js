@@ -13,6 +13,15 @@ fsicon.style.zIndex = 2000;
 fsicon.style.top = '10px';
 fsicon.style.right = '10px';
 fsicon.style.position = 'fixed';
+	
+	
+var cto; 
+fsicon.style.transitionDuration = '1s'; 
+document.onmousemove = function(){ 
+	clearTimeout(cto); 
+	fsicon.style.opacity = 0.5;  
+	cto = setTimeout(function(){fsicon.style.opacity = 0;},5000);
+}
 
 document.body.appendChild(fsicon);
 
